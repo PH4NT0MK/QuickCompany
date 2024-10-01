@@ -16,7 +16,7 @@ namespace QuickCompany
     {
         private const string modGUID = "Phantom.QuickCompany";
         private const string modName = "QuickCompany";
-        private const string modVersion = "0.0.2";
+        private const string modVersion = "0.0.3";
 
         private readonly Harmony harmony = new Harmony(modGUID);
         private static QuickCompanyBase Instance;
@@ -35,6 +35,7 @@ namespace QuickCompany
 
             harmony.PatchAll(typeof(QuickCompanyBase));
             harmony.PatchAll(typeof(PlayerControllerBPatch));
+            harmony.PatchAll(typeof(ItemDropshipPatch));
         }
     }
 }
